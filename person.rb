@@ -14,8 +14,7 @@ class Person
   end
 
   def add_rental(rental)
-    rentals.push(rental)
-    rental.person = self
+    @rentals << rental
   end
 
   def of_age?
