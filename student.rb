@@ -6,7 +6,13 @@ class Student < Person
     @classroom = classroom
   end
 
-  def play_hooky
+  def classroom=(classroom)
+    @classroom = classroom
+    classroom.students.push(self) unless classroom.students.includes?(self)
+  end
+
+  def
+  def(_play_hooky)
     "¯\(ツ)/¯"
   end
 end
