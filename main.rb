@@ -28,6 +28,7 @@ class App
     puts '7 - exit'
   end
 
+  #  rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
   def start
     message
     option = gets.chomp.to_i
@@ -48,6 +49,7 @@ class App
     list_rentals_by_id if option == 6
     exit if option == 7
   end
+  # rubocop:enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
   def create_teacher
     print "Enter teacher's age: "
