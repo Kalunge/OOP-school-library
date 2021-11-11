@@ -47,7 +47,7 @@ class App
     create_book if option == 4
     create_rental if option == 5
     list_rentals_by_id if option == 6
-    exit if option == 7
+    puts 'Thank you for using the app' and exit if option == 7
   end
   # rubocop:enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
