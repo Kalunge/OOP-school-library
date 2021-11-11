@@ -16,7 +16,7 @@ class App
     start
   end
 
-  def start
+  def message
     puts
     puts 'Please select an option by entering a number'
     puts '1 - list all books'
@@ -26,6 +26,10 @@ class App
     puts '5 - create a rental'
     puts '6 - list all rentals for a given person id'
     puts '7 - exit'
+  end
+
+  def start
+    message
     option = gets.chomp.to_i
     if option == 3
       print 'Do you want to create a student(1) or a teacher(2)? [input the number]: '
