@@ -59,7 +59,7 @@ class App
     print "Enter teacher's name: "
     name = gets.chomp
     teacher = Teacher.new(age: age, specialization: specialization, name: name)
-    @people << teacher
+    people << teacher
     puts 'Teacher created succefully'
     start
   end
@@ -85,7 +85,7 @@ class App
     author = gets.chomp
 
     book = Book.new(title: title, author: author)
-    @books << book
+    books << book
     puts 'Book successfully created'
     start
   end
@@ -97,7 +97,7 @@ class App
     puts
 
     puts 'Select a person from the following list by number NOT BY ID'
-    @people.each_with_index do |person, index|
+    people.each_with_index do |person, index|
       puts "#{index}) [#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
     person_index = gets.chomp.to_i
@@ -133,8 +133,8 @@ class App
     start
   end
 
-  def list_books
-    if @books.empty?
+  def list_book
+    if books.empty?
       puts 'You have not added any book'.upcase
       puts
     end
